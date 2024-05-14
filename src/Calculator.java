@@ -21,5 +21,12 @@ public class Calculator {
     public double cubeVolume(double side) {
         return Math.pow(side, 3);
     }
+
+    public double squareRoot(double a) {
+        if (a < 0) {
+            throw new IllegalArgumentException("Square root of a negative number is not allowed");
+        }
+        return Math.sqrt(a);
+    }
 }
 

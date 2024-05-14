@@ -5,7 +5,7 @@ public class CalculatorApplication {
         Calculator calculator = new Calculator();
         Scanner scanner = new Scanner(System.in);
         while (true) {
-            System.out.println("Enter operation (add, subtract, multiply, divide, cube volume, exit): ");
+            System.out.println("Enter operation (add, subtract, multiply, divide, cube volume, square root, exit): ");
             String operation = scanner.nextLine();
             if (operation.equalsIgnoreCase("exit")) {
                 break;
@@ -21,7 +21,16 @@ public class CalculatorApplication {
                         continue;
                     }
                     System.out.println("Result: " + calculator.cubeVolume(a));
-                } else {
+                } else if (operation.equalsIgnoreCase("square root")) {
+                    System.out.println("Enter one number: ");
+                    a = Double.parseDouble(scanner.nextLine());
+                    if (a < 0) {
+                        System.out.println("Invalid input. Square root argument cannot be negative.");
+                        continue;
+                    }
+                    System.out.println("Result: " + calculator.squareRoot(a));
+                }
+                else {
                     System.out.println("Enter two numbers: ");
                     a = Double.parseDouble(scanner.nextLine());
                     b = Double.parseDouble(scanner.nextLine());
