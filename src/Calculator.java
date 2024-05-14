@@ -17,5 +17,9 @@ public class Calculator {
         }
         return a / b;
     }
+
+    public double cubeVolume(double side) {
+        return Math.pow(side, 3);
+    }
 }
 
